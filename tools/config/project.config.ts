@@ -32,6 +32,14 @@ export class ProjectConfig extends SeedConfig {
       // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
     ];
 
+    this.SYSTEM_CONFIG_DEV.paths['oidc-client'] =
+      `${this.APP_BASE}node_modules/oidc-client/lib/oidc-client`;
+
+    this.SYSTEM_BUILDER_CONFIG.packages['oidc-client'] = {
+        main: 'lib/oidc-client.js',
+        defaultExtension : 'js'
+    };
+
     // Add packages (e.g. lodash)
     // let additionalPackages: ExtendPackages[] = [{
     //   name: 'lodash',

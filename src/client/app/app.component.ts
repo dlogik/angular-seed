@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Config } from './shared/index';
 import './operators';
 
-import { UserManager } from 'oidc-client/oidc-client';
+import { UserManager } from 'oidc-client';
 
 const settings: any = {
   authority: 'http://localhost:5000/oidc',
